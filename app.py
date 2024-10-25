@@ -21,11 +21,11 @@ st.markdown(
     body {
         background-color: var(--background-color);
         color: var(--text-color);
-        font-family: var(--font, "sans serif");
+        font-family: var(--font, "monospace");
     }
 
     h1 {
-        color: var(--text-color);
+        color: var(--background-color);
     }
     </style>
     """,

@@ -74,16 +74,16 @@ for index, row in df.iterrows():
 st.markdown("<h1 style='text-align: center;'>Find Your Closest Polling Destination!</h1>", unsafe_allow_html=True)
 
 # Sidebar input for address
-address = st.sidebar.text_input("Enter an address", "Your Address")
+#address = st.sidebar.text_input("Enter an address", "Your Address")
 
 # Update the map with the address marker
+#if address:
+#    add_address_marker(address, m)
+
+address = st.text_input("Address:")
+
 if address:
     add_address_marker(address, m)
-
-# address = st.text_input("Address:")
-
-# if address:
-#    add_address_marker(address, m)
 
 # Display the map using streamlit_folium
 st_folium(m, width=750, height=500)

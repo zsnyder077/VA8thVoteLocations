@@ -71,7 +71,7 @@ for index, row in df.iterrows():
     ).add_to(m)
 
 # Streamlit app UI
-st.title("Interactive Map with Address Input")
+st.title("Find Your Nearest Polling Destination")
 
 # Sidebar input for address
 address = st.sidebar.text_input("Enter an address", "Your Address")

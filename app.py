@@ -78,7 +78,7 @@ st.markdown("<h1 style='text-align: center;'>Find Your Closest Polling Destinati
 #if address:
 #    add_address_marker(address, m)
 
-address = st.text_input("Address:")
+address = st.text_input("Your Address:")
 
 if address:
     add_address_marker(address, m)

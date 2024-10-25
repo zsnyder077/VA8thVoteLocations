@@ -46,10 +46,10 @@ def add_address_marker(address, map_obj):
 
 # Add circle markers from data
 for index, row in df.iterrows():
-    latitude = row[3]  # Use the column name for latitude
-    longitude = row[4]  # Use the column name for longitude
-    column1_value = row[0]  # Assuming there's a column named 'Name'
-    column2_value = row[1]  # Assuming there's a column named 'Description'
+    latitude = row[3]
+    longitude = row[4]
+    column1_value = row[0]
+    column2_value = row[1]
 
     popup_content = f'''
     <div style="width: 200px;">
@@ -70,13 +70,6 @@ for index, row in df.iterrows():
 
 # Streamlit app UI
 st.markdown("<h1 style='text-align: center;'>Find Your Closest Polling Destination!</h1>", unsafe_allow_html=True)
-
-# Sidebar input for address
-#address = st.sidebar.text_input("Enter an address", "Your Address")
-
-# Update the map with the address marker
-#if address:
-#    add_address_marker(address, m)
 
 address = st.text_input("Your Address:")
 

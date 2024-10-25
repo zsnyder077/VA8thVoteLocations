@@ -8,19 +8,29 @@ from streamlit_folium import st_folium
 # file_path = 'Desktop/Voting_Destinations/votingLocs.csv'
 df = pd.read_csv("votingLocs.csv")
 
-{
-    --primary-color: #1597d3;
-    --background-color: #1597d3;
-    --secondary-background-color: #1597d3;
-    --text-color: #000000;
-}
+st.markdown(
+    """
+    <style>
+    :root {
+        --primary-color: #1597d3;
+        --background-color: #1597d3;
+        --secondary-background-color: #1597d3;
+        --text-color: #000000;
+    }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-family: var(--font, "sans serif");
-}
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-family: var(--font, "sans serif");
+    }
 
+    h1 {
+        color: var(--text-color);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.image('dBeyer.jpg', use_column_width=True)
 
 # Initialize map

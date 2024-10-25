@@ -4,39 +4,22 @@ from geopy.geocoders import ArcGIS
 import pandas as pd
 from streamlit_folium import st_folium
 
-# Sample dataset for markers
-df = pd.read_csv('https://raw.githubusercontent.com/zsnyder077/VA8thVoteLocations/refs/heads/main/votingLocs.csv')
-# Streamlit app title
-st.title("Interactive Map with Address Input")
+# Load the CSV file
+df = pd.read_csv('Voting_Destinations/votingLocs.csv')
+df.columns = df.columns.str.strip()  # Clean column names
 
-# Function to add a marker for an address entered by the user
-def add_address_marker(address, map_obj):
-    geolocator = ArcGIS()
-    try:
-        location = geolocator.geocode(address, timeout=10)
-        if location:
-            latitude = location.latitude
-            longitude = location.longitude
-            popup = folium.Popup(f"<div style='width: 75px;'><strong>{'Your Location'}</strong></div>", max_width=250)
-            folium.Marker(
-                location=[latitude, longitude],
-                icon=folium.Icon(icon='star'),
-                popup=popup
-            ).add_to(map_obj)
-        else:
-            st.error(f"Address not found: {address}")
-    except Exception as e:
-        st.error(f"Geocoding error: {e}")
+# Display column names for debugging
+st.write(df.columns)
 
-# Creating a base map
+# Create a base map
 m = folium.Map(location=[38.826671, -77.120943], zoom_start=11.2)
 
 # Add the markers for each row in the dataframe
 for index, row in df.iterrows():
-    latitude = row['3']
-    longitude = row['4']
-    column1_value = row['0']
-    column2_value = row['1']
+    latitude = row['Latitude']  # Use the actual column name for latitude
+    longitude = row['Longitude']  # Use the actual column name for longitude
+    column1_value = row['Name']  # Use the actual column name for Name
+    column2_value = row['Address']  # Use the actual column name for Address
     
     popup_content = f'''
     <div style="width: 200px;">

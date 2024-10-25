@@ -15,7 +15,7 @@ st.markdown(
         --primary-color: #1597d3;
         --background-color: #1597d3;
         --secondary-background-color: #1597d3;
-        --text-color: #000000;
+        --text-color: #ffffff;
     }
 
     body {

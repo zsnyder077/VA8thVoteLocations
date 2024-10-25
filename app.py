@@ -8,6 +8,16 @@ from streamlit_folium import st_folium
 # file_path = 'Desktop/Voting_Destinations/votingLocs.csv'
 df = pd.read_csv("votingLocs.csv")
 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background-color: #1597d3;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.image('dBeyer.jpg', use_column_width=True)
 
 # Initialize map

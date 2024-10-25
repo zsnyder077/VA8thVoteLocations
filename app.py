@@ -5,13 +5,7 @@ import pandas as pd
 from streamlit_folium import st_folium
 
 # Sample dataset for markers
-df = pd.DataFrame({
-    'Name': ['Location1', 'Location2'],
-    'Description': ['Description1', 'Description2'],
-    'Latitude': [38.826671, 38.927000],
-    'Longitude': [-77.120943, -77.020943]
-})
-
+df = pd.read_csv('votingLocs.csv')
 # Streamlit app title
 st.title("Interactive Map with Address Input")
 

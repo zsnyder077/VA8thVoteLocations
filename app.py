@@ -8,7 +8,7 @@ from streamlit_folium import st_folium
 # file_path = 'Desktop/Voting_Destinations/votingLocs.csv'
 df = pd.read_csv("votingLocs.csv")
 
-:root {
+{
     --primary-color: #1597d3;
     --background-color: #1597d3;
     --secondary-background-color: #1597d3;

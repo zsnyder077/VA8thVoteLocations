@@ -36,7 +36,7 @@ for index, row in df.iterrows():
     latitude = row['Latitude']
     longitude = row['Longitude']
     column1_value = row['Name']
-    column2_value = row['Address']
+    column2_value = row['Adress']
     
     popup_content = f'''
     <div style="width: 200px;">

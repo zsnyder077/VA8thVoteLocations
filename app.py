@@ -4,8 +4,6 @@ from geopy.geocoders import ArcGIS
 import pandas as pd
 from streamlit_folium import st_folium
 
-# Load data
-# file_path = 'Desktop/Voting_Destinations/votingLocs.csv'
 df = pd.read_csv("votingLocs.csv")
 
 st.image('dBeyer.jpg', use_column_width=True)

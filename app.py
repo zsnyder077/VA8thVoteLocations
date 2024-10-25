@@ -11,7 +11,9 @@ df = pd.read_csv("votingLocs.csv")
 st.markdown(
     """
     <style>
-    .reportview-container {
+    body {
+        background-color: #1597d3;}
+    .streamlit-expanderHeader {
         background-color: #1597d3;}
     </style>
     """,

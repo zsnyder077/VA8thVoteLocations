@@ -25,7 +25,6 @@ def add_address_marker(address, map_obj):
             latitude = location.latitude
             longitude = location.longitude
 
-            # Popup message for the marker
             popup = folium.Popup(f"<div style='width: 75px;'><strong>{'Your Location'}</strong></div>", max_width=250)
 
             if last_red_marker:

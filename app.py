@@ -11,7 +11,7 @@ df = pd.read_csv("votingLocs.csv")
 st.image('dBeyer.jpg', use_column_width=True)
 
 # Initialize map
-m = folium.Map(location=[38.82667174903602, -77.12094362224809], zoom_start=10.7)
+m = folium.Map(location=[38.82667174903602, -77.12094362224809], zoom_start=10.5)
 
 last_red_marker = None
 

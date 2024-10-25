@@ -83,7 +83,7 @@ st.markdown("<h1 style='text-align: center;'>Find Your Closest Polling Destinati
 # Display the map using streamlit_folium
 st_folium(m, width=725, height=500)
 
-address = st.text_input("Enter Address")
+address = st.text_input("Address:")
 
 if address:
     add_address_marker(address, m)

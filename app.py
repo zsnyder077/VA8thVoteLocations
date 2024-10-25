@@ -19,7 +19,7 @@ st.markdown(
     }
 
     body {
-        background-color: var(--background-color);
+        background-color: var(--text-color);
         color: var(--text-color);
         font-family: var(--font, "monospace");
     }

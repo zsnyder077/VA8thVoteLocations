@@ -5,7 +5,7 @@ import pandas as pd
 from streamlit_folium import st_folium
 
 # Load the CSV file
-df = pd.read_csv('Voting_Destinations/votingLocs.csv')
+df = pd.read_csv('votingLocs.csv')
 df.columns = df.columns.str.strip()  # Clean column names
 
 # Display column names for debugging
